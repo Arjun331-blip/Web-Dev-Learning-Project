@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Prime Number Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prime Number Checker</h1>
+        <input type="number" id="input" placeholder="Enter a number">
+        <button onclick="">Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let checkPrime = document.querySelector("button");
+        let input = document.querySelector("input");
+        let result = document.querySelector("#result");
+
+        checkPrime.addEventListener("click", (e) => {
+            let value = Number(input.value);
+            let flag = false;
+            for(let i = 2; i < Math.sqrt(value); i++){
+                if(value%i == 0){
+                    flag = true;
+                }
+            }
+            if(flag === true){
+                result.textContent = `this is not Prime Number ${value}`;
+            } else {
+                result.textContent = `this is Prime Number ${value}`
+            }
+            
+        });
+    </script>
+</body>
+</html>
