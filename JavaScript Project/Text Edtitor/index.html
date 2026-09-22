@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <section>
+      <h1>TEXT EDITOR</h1>
+      <div class="buttonContainer">
+        <button data-action="bold" title="Bold Text">Bold</button>
+        <button data-action="italic" title="Italic Text">Italic</button>
+        <button data-action="left" title="Left Align">
+          <i class="fas fa-align-left"></i>
+        </button>
+        <button data-action="center" title="Center Align">
+          <i class="fas fa-align-center"></i>
+        </button>
+        <button data-action="right" title="Right Align">
+          <i class="fas fa-align-right"></i>
+        </button>
+        <button data-action="uppercase" title="Uppercase Text">
+          Upper Case
+        </button>
+        <button data-action="lowercase" title="Lowercase Text">
+          Lower Case
+        </button>
+        <button data-action="capitalize" title="Capitalize Text">
+          Capitalize
+        </button>
+        <button data-action="clear" title="Clear Text">Clear Text</button>
+      </div>
+      <textarea id="text" rows="15" placeholder="Your text here...">
+      </textarea>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
